@@ -6,7 +6,8 @@ import bg from '../../../assets/bg1.png'
 
 const RightNav = () => {
   return (
-    <div>
+    
+    <div className="sticky-top">
      <div>
      <h4 className="mb-4">Login With </h4>
       <Button className="mb-2" variant="outline-primary"> <FaGoogle/> Login With Google</Button>

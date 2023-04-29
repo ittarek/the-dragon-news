@@ -9,23 +9,22 @@ const LeftNav = () => {
       .then((res) => res.json())
       .then((data) => {
         setCatagories(data);
-        console.log(data);
+        // console.log(data);
       })
       .catch((error) => console.log(error));
   }, []);
 
   return (
-    <div>
+    <div className="sticky-top">
       <h4>All Category</h4>
 
       <div className="ps-2">
         {catagories.map((category) => (
-          <div>
-            {" "}
-            <p>
-              <Link to={`/category/${category.id}`} key={category.id} className="text-decoration-none">{category.name}</Link>
+              
+            <p  key={category.id}>
+              <Link to={`/category/${category.id}`}  className="text-decoration-none">{category.name}</Link>
             </p>
-          </div>
+        
         ))}
       </div>
     </div>
