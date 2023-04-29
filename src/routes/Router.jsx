@@ -43,7 +43,7 @@ element:<Navigate to="/category/0"></Navigate>
       {
         path:':id',
         element:<Category></Category>,
-        loader:({params}) => fetch(`http://localhost:5000/catagories/${params.id}`)
+        loader:({params}) => fetch(`https://the-news-dragon-server-ittarek.vercel.app/catagories/${params.id}`)
           
       },
     ],
@@ -55,7 +55,7 @@ element:<Navigate to="/category/0"></Navigate>
       {
         path:':id',
         element:<PrivetRoue><News></News>,</PrivetRoue>,
-        loader: ({params}) =>fetch(`http://localhost:5000/news/${params.id}`)
+        loader: ({params}) =>fetch(`https://the-news-dragon-server-ittarek.vercel.app/news/${params.id}`)
       }
     ]
   }

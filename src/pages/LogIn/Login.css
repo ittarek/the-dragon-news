@@ -1,0 +1,13 @@
+/* 
+.responsive{
+   width: 25%;
+   margin-left: auto;
+   margin-right: auto;
+} */
+@media screen and (max-width:576px)  {
+          .responsive{
+                 
+                   width: 100% !important;
+                 
+          }
+}

@@ -5,7 +5,7 @@ const LeftNav = () => {
   const [catagories, setCatagories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/catagories")
+    fetch("https://the-news-dragon-server-ittarek.vercel.app/catagories")
       .then((res) => res.json())
       .then((data) => {
         setCatagories(data);
@@ -15,7 +15,7 @@ const LeftNav = () => {
   }, []);
 
   return (
-    <div className="sticky-top">
+    <div className="sticky-top container">
       <h4>All Category</h4>
 
       <div className="ps-2">

@@ -32,7 +32,7 @@ const [accepted ,setAccepted] = useState(false)
     setAccepted(event.target.checked)
   }
   return (
-    <Container className="w-25 mx-auto">
+    <Container className="lg:w-25 mx-auto">
       <h4>Register your Account</h4>
       <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3" controlId="formBasicEmail">

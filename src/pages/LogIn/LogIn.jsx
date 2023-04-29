@@ -3,13 +3,14 @@ import { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import './Login.css'
 
 const LogIn = () => {
   const { createLogin } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location);
-  const from = location.state?.from?.pathname || '/'
+  const from = location.state?.from?.pathname || "/";
   const handleLogIn = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -30,8 +31,8 @@ const LogIn = () => {
   };
 
   return (
-    <Container className="w-25 mx-auto">
-      <Form onSubmit={handleLogIn}>
+    <Container className="responsive  w-25   mx-auto">
+      <Form className="" onSubmit={handleLogIn}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" name="email" placeholder="Enter email" />
@@ -57,7 +58,9 @@ const LogIn = () => {
           Dont’t Have An Account ? <span className="text-danger">Register</span>{" "}
         </Link>
       </Form>
-    </Container>
+   </Container>
+
+   
   );
 };
 
